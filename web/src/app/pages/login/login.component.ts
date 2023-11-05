@@ -1,0 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login-service';
+
+@Component({
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+})
+export class LoginComponent implements OnInit {
+    formLogin!: FormGroup;
+
+    constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginService) {}
+
+    ngOnInit(): void {
+        this.formLogin = this.formBuilder.group({
+            userName: new FormControl('', [Validators.required]),
+            password: new FormControl('', [Validators.required]),
+            passwordRemember: new FormControl(false),
+        });
+    }
+
+    onSubmit() {
+        if (this.formLogin.invalid) {
+            alert('Formulário inválido');
+            return;
+        }
+
+        console.log(this.formLogin.value);
+        this.loginService.login(this.formLogin.value.userName, this.formLogin.value.password).subscribe((loginResult: any) => {
+            console.log(loginResult);
+            this.router.navigate(['/home']);
+        });
+    }
+}

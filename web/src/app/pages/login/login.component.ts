@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login-service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -11,7 +11,7 @@ import { LoginService } from 'src/app/services/login-service';
 export class LoginComponent implements OnInit {
     formLogin!: FormGroup;
 
-    constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginService) {}
+    constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthService) {}
 
     ngOnInit(): void {
         this.formLogin = this.formBuilder.group({
@@ -28,9 +28,6 @@ export class LoginComponent implements OnInit {
         }
 
         console.log(this.formLogin.value);
-        this.loginService.login(this.formLogin.value.userName, this.formLogin.value.password).subscribe((loginResult: any) => {
-            console.log(loginResult);
-            this.router.navigate(['/home']);
-        });
+        this.authService.login(this.formLogin.value.userName, this.formLogin.value.password);
     }
 }

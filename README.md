@@ -1,11 +1,11 @@
-# STADCAS4DA_2303-2303-695394 2303-PROJETO INTEGRADOR: DESENVOLVIMENTO DE SISTEMAS ORIENTADO A DISPOSITIVOS MÓVEIS E BASEADOS NA WEB
+# STADCAS4DA_2303-2303-695394 2303-PROJETO INTEGRADOR
 
 ## Prerequisites
 
--> [node LTS](https://nodejs.org/en/download)
--> [dotnet 7](https://dotnet.microsoft.com/pt-br/download/dotnet/7.0)
--> [angular cli](https://angular.io/cli)
--> IDE: [VS Code](https://code.visualstudio.com/download) or [Rider](https://www.jetbrains.com/pt-br/rider/download/#section=windows) or [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
+- [node LTS](https://nodejs.org/en/download)
+- [dotnet 7](https://dotnet.microsoft.com/pt-br/download/dotnet/7.0)
+- [angular cli](https://angular.io/cli)
+- IDE: [VS Code](https://code.visualstudio.com/download) or [Rider](https://www.jetbrains.com/pt-br/rider/download/#section=windows) or [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
 
 ## Descomplica Gastos - Web
 
@@ -43,4 +43,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 dotnet run --project DescomplicaGastos.Api/DescomplicaGastos.Api.csproj
 ```
 
-## Banco de Dados
+## Database

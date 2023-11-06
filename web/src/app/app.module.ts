@@ -8,12 +8,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExpenseComponent } from './pages/expense/expense.component';
 
 @NgModule({
-    declarations: [AppComponent, LoginComponent, HomeComponent],
+    declarations: [AppComponent, LoginComponent, HomeComponent, ExpenseComponent],
     imports: [BrowserModule, AppRoutingModule, NgbModule, ReactiveFormsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })
-
 export class AppModule {}

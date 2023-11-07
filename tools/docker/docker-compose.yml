@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mongo-db:
+    image: mongo
+    container_name: mongo-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Pa55w0rd
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./MongoDB/volumes/:/data/db
+    networks:
+      - mongo-compose-network
+
+networks:
+    mongo-compose-network:
+      driver: bridge

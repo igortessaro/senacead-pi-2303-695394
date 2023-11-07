@@ -440,3 +440,7 @@ testem.log
 .DS_Store
 Thumbs.db
 web/.angular/cache/16.2.9/angular-webpack/1f7f137716d815ba81bb515590d2ab3c23a1d21a/0.pack
+
+
+# Docker volumes
+/tools/docker/MongoDB/

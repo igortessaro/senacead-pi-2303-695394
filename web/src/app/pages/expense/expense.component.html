@@ -32,9 +32,43 @@
             <td>{{expense.value | currency}}</td>
             <td>{{expense.date | date:'dd/MM/yyyy HH:mm:ss'}}</td>
             <td>
-                <a class="bi bi-pencil-square"></a>
+                <a class="bi bi-pencil-square" (click)="open(editExpenseModal, expense)"></a>
                 <a class="bi bi-trash" (click)="deleteExpense(expense.uuid)"></a>
             </td>
         </tr>
     </tbody>
 </table>
+
+<ng-template #editExpenseModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Editar Gasto</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="formEditExpense" (ngSubmit)="onSubmitEdit()">
+            <div class="row">
+                <div class="form-group">
+                    <label for="uuid">Uuid</label>
+                    <input type="text" formControlName="uuid" class="form-control" [disabled]="true" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Descricao</label>
+                    <input type="text" formControlName="description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="value">Valor</label>
+                    <input type="text" formControlName="value" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="date">Data</label>
+                    <input type="text" formControlName="date" class="form-control" [disabled]="true"/>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary" [disabled]="formEditExpense.invalid">Salvar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+</ng-template>

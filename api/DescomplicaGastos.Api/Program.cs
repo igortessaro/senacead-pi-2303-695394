@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 _ = builder.Services.AddScoped<IUserRespository, UserRepository>();
+_ = builder.Services.AddScoped<IExpenseRepository, ExpenseRepository>();
 
 _ = builder.Services.AddControllers();
 _ = builder.Services.AddEndpointsApiExplorer();

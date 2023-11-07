@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,12 @@ import { ExpenseComponent } from './pages/expense/expense.component';
 @NgModule({
     declarations: [AppComponent, LoginComponent, HomeComponent, ExpenseComponent],
     imports: [BrowserModule, AppRoutingModule, NgbModule, ReactiveFormsModule, HttpClientModule],
-    providers: [],
+    providers: [
+        {
+            provide: DEFAULT_CURRENCY_CODE,
+            useValue: 'BRL',
+        },
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

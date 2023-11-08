@@ -1,13 +1,12 @@
-import { v4 as uuidv4 } from 'uuid';
-
 export class Expense {
-    constructor(description: string, value: number) {
+    constructor(description: string, value: number, userUuid: string) {
         this.description = description;
         this.value = value;
     }
 
-    uuid: string = uuidv4();
+    id: string = '';
+    userUuid: string = '';
     description: string = '';
     value: number = 0;
-    date: Date = new Date();
+    createdAt: Date = new Date();
 }

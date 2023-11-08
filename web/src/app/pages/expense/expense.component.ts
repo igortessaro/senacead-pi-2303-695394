@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Expense } from 'src/app/models/expense';
+import { AuthService } from 'src/app/services/auth.service';
+import { ExpenseService } from 'src/app/services/expense.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
     selector: 'app-expense',
@@ -12,8 +15,13 @@ export class ExpenseComponent implements OnInit {
     public formAddExpense!: FormGroup;
     public formEditExpense!: FormGroup;
     public expenses: Expense[] = [];
+    private userUuid: string = '';
 
-    constructor(private formBuilder: FormBuilder, private modalService: NgbModal) {}
+    constructor(
+        private formBuilder: FormBuilder,
+        private modalService: NgbModal,
+        private expenseService: ExpenseService,
+        private localStorageService: LocalStorageService) {}
 
     public ngOnInit(): void {
         this.formAddExpense = this.formBuilder.group({
@@ -26,28 +34,28 @@ export class ExpenseComponent implements OnInit {
             description: new FormControl('', [Validators.required]),
             value: new FormControl('', [Validators.required]),
         });
+        this.userUuid = this.localStorageService.get('user').uuid;
 
-        this.expenses = [
-            new Expense('Gasolina', 582.34),
-            new Expense('Almoço', 1050.10),
-            new Expense('Lanche', 20.09)
-        ];
+        this.expenseService.getAllByUser(this.userUuid).subscribe((expenses) => {
+            this.expenses = expenses;
+        });
     }
 
     public onSubmit() {
-        const expense = new Expense(this.formAddExpense.value.description, this.formAddExpense.value.value);
-        this.expenses.push(expense);
-        this.formAddExpense.reset();
+        this.expenseService.create(this.formAddExpense.value.description, this.formAddExpense.value.value, this.userUuid).subscribe((expense) => {
+            this.formAddExpense.reset();
+            this.expenses.push(expense);
+        });
     }
 
-    public deleteExpense(uuid: string) {
-        this.expenses = this.expenses.filter((expense) => expense.uuid !== uuid);
+    public deleteExpense(id: string) {
+        this.expenses = this.expenses.filter((expense) => expense.id !== id);
     }
 
     public open(modal: any, expense: Expense): void {
         this.formEditExpense.setValue({
-            uuid: expense.uuid,
-            date: expense.date,
+            id: expense.id,
+            createdAt: expense.createdAt,
             description: expense.description,
             value: expense.value,
         });
@@ -55,7 +63,7 @@ export class ExpenseComponent implements OnInit {
     }
 
     public onSubmitEdit() {
-        const expense = this.expenses.find((expense) => expense.uuid === this.formEditExpense.value.uuid);
+        const expense = this.expenses.find((expense) => expense.id === this.formEditExpense.value.id);
         if (expense) {
             expense.description = this.formEditExpense.value.description;
             expense.value = this.formEditExpense.value.value;

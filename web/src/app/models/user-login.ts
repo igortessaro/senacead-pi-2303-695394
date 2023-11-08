@@ -1,4 +1,6 @@
 export class UserLogin {
-    userName: string = '';
+    id: string = '';
+    name: string = '';
     password: string = '';
+    uuid: string = '';
 }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { UserLogin } from '../models/user-login';
 import { LocalStorageService } from './local-storage.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root',
@@ -29,7 +30,7 @@ export class AuthService {
     }
 
     public login(userName: string, password: string): void {
-        this.http.post("http://localhost:5224/api/login", { userName, password }).subscribe((res) => {
+        this.http.post(`${environment.expenseApi}/api/login`, { userName, password }).subscribe((res) => {
             this.loggedIn.next(true);
             this.loggedInUser.next(res as UserLogin);
             this.localStorageService.set('user', res);

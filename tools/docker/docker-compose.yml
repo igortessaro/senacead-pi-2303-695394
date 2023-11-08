@@ -12,8 +12,32 @@ services:
     volumes:
       - ./MongoDB/volumes/:/data/db
     networks:
-      - mongo-compose-network
+      - descomplica-gastos-network
+  descomplica-gastos-web:
+    container_name: descomplica-gastos-web
+    build:
+      context: ../../web/
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - descomplica-gastos-api
+    networks:
+      - descomplica-gastos-network
+  descomplica-gastos-api:
+    container_name: descomplica-gastos-api
+    build:
+      context: ../../api/
+      dockerfile: Dockerfile
+    ports:
+      - "5224:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+      - mongo-db
+    networks:
+      - descomplica-gastos-network
 
 networks:
-    mongo-compose-network:
+    descomplica-gastos-network:
       driver: bridge

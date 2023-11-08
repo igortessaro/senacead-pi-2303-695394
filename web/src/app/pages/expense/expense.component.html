@@ -47,9 +47,13 @@
     <div class="modal-body">
         <form [formGroup]="formEditExpense" (ngSubmit)="onSubmitEdit()">
             <div class="row">
-                <div class="form-group">
+                <div class="form-group" *ngIf="false">
+                    <label for="id">User Uuid</label>
+                    <input type="text" formControlName="userUuid" class="form-control" [disabled]="true" />
+                </div>
+                <div class="form-group" *ngIf="false">
                     <label for="id">Id</label>
-                    <input type="text" formControlName="id" class="form-control" [disabled]="true" />
+                    <input type="text" formControlName="userUuid" class="form-control" [disabled]="true" />
                 </div>
                 <div class="form-group">
                     <label for="description">Descricao</label>
@@ -59,7 +63,7 @@
                     <label for="value">Valor</label>
                     <input type="text" formControlName="value" class="form-control"/>
                 </div>
-                <div class="form-group">
+                <div class="form-group" *ngIf="false">
                     <label for="createdAt">Data de Criacao</label>
                     <input type="text" formControlName="createdAt" class="form-control" [disabled]="true"/>
                 </div>

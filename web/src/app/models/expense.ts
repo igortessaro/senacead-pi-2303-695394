@@ -2,6 +2,7 @@ export class Expense {
     constructor(description: string, value: number, userUuid: string) {
         this.description = description;
         this.value = value;
+        this.userUuid = userUuid;
     }
 
     id: string = '';

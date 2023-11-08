@@ -17,4 +17,8 @@ export class ExpenseService {
         const expense = new Expense(description, value, userUuid);
         return this.http.post<Expense>('http://localhost:5224/api/expense', expense);
     }
+
+    public update(expense: Expense): Observable<Expense> {
+        return this.http.put<Expense>(`http://localhost:5224/api/expense/${expense.id}`, expense);
+    }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Expense } from 'src/app/models/expense';
-import { AuthService } from 'src/app/services/auth.service';
 import { ExpenseService } from 'src/app/services/expense.service';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
@@ -29,10 +28,11 @@ export class ExpenseComponent implements OnInit {
             value: new FormControl('', [Validators.required]),
         });
         this.formEditExpense = this.formBuilder.group({
-            uuid: new FormControl('', [Validators.required]),
-            date: new FormControl('', [Validators.required]),
+            id: new FormControl('', [Validators.required]),
+            createdAt: new FormControl('', [Validators.required]),
             description: new FormControl('', [Validators.required]),
             value: new FormControl('', [Validators.required]),
+            userUuid: new FormControl('', [Validators.required]),
         });
         this.userUuid = this.localStorageService.get('user').uuid;
 
@@ -58,16 +58,23 @@ export class ExpenseComponent implements OnInit {
             createdAt: expense.createdAt,
             description: expense.description,
             value: expense.value,
+            userUuid: expense.userUuid,
         });
         this.modalService.open(modal);
     }
 
     public onSubmitEdit() {
         const expense = this.expenses.find((expense) => expense.id === this.formEditExpense.value.id);
-        if (expense) {
-            expense.description = this.formEditExpense.value.description;
-            expense.value = this.formEditExpense.value.value;
+        if (expense == null || expense === undefined) {
+            this.modalService.dismissAll();
+            return;
         }
-        this.modalService.dismissAll();
+
+        expense.description = this.formEditExpense.value.description;
+        expense.value = this.formEditExpense.value.value;
+
+        this.expenseService.update(expense).subscribe((expense) => {
+            this.modalService.dismissAll();
+        });
     }
 }

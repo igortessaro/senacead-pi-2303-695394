@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    background-color: #BCE8E3;
+}
+
+.col .form-control{
+    border: 1px solid #a8a7a7;
+    background-color: #F0F0F0;
+}
+
+.col .btn{
+    color: #FFF;
+    border: 1px solid #a8a7a7;
+    background-color: #23D2BE;
+}
+
+.form-group .form-control{
+    border: 1px solid #a8a7a7;
+    background-color: #F0F0F0;
+}

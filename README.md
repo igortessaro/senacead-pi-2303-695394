@@ -44,3 +44,9 @@ dotnet run --project DescomplicaGastos.Api/DescomplicaGastos.Api.csproj
 ```
 
 ## Database
+
+## Docker
+
+```shell
+    docker compose -p "descomplica-gastos" up -d --build
+```

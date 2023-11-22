@@ -114,4 +114,8 @@ https://github.com/igortessaro/senacead-pi-2303-695394/assets/98164934/92cddaa5-
         <li>Na barra de navegação clicar em gastos e adicionar um gasto, editar e/ou excluir.</li>
     </ol>
     Rodando desta maneira não é necessário que sejam instaladas todas as tecnologias utilizadas, por isso optamos pelo docker como auxiliar.
-</p>
+</p> 
+</br>
+<p><strong>Vídeo auxiliar de como testar a aplicação</strong></p>
+
+https://github.com/igortessaro/senacead-pi-2303-695394/assets/98164934/4d5a57b2-3b3e-4d94-afa0-d5ba8fcac33f

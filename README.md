@@ -89,7 +89,12 @@
 
 <div align="center">
  <p> <strong>Vídeo</strong></p>
-    https://github.com/igortessaro/senacead-pi-2303-695394/assets/98164934/e8c754e8-8029-4477-a027-9eb4d2154304
+    <video width="320" height="240" controls>
+      <source src="https://github.com/igortessaro/senacead-pi-2303-695394/assets/98164934/e8c754e8-8029-4477-a027-9eb4d2154304" type="video/mp4">
+    </video>
+
+    
+   
 </div>
 
 <hr>

@@ -42,11 +42,13 @@
   Possibilitando assim que o usuário possa adicionar e visualizar de maneira fácil seus gastos.
 </p>
 
+<div align="center">
 <p>Protótipo das telas apresentadas e adequadas para web, clique no link abaixo: </br>
   <a href="https://www.figma.com/file/rMVee6XLTbZFhQJUxP8wVz/Descomplica-WEB?type=design&node-id=1%3A495&mode=design&t=2RwQtvuchIGD8gcm-1" target="_blank">
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
   </a>
 </p>
+</div>
 
 <hr> 
 
@@ -54,14 +56,14 @@
  <p> <strong>Preparação do Ambiente de Desenvolvimento</strong></p>
 </div>
 
-<div align="left">
+<div align="center">
   Tecnologia Frontend - Angular CLI version 16.2.9 </br>
   <a href="https://angular.io/cli" target="_blank">
     <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
   </a>
 </div>
 
-<div align="left">
+<div align="center">
   Tecnologia Backend - Dotnet 7 | Node LTS </br>
   <a href="https://dotnet.microsoft.com/pt-br/download/dotnet/7.0" target="_blank">
     <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"/>
@@ -71,14 +73,14 @@
   </a>
 </div>
 
-<div align="left">
+<div align="center">
   Banco de Dados - MongoDB</br>
   <a href="" target="_blank">
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
   </a>
 </div>
 
-<div align="left">
+<div align="center">
   Tecnologia Auxiliar - Docker </br>
   <a href="" target="_blank">
     <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>

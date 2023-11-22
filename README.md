@@ -1,52 +1,112 @@
-# STADCAS4DA_2303-2303-695394 2303-PROJETO INTEGRADOR
+<div align="center">
+  <img src="https://github.com/lucasgviotti/Teste/assets/98164934/891cf4af-ae9e-4b9a-ba20-10d52d466be8">
+</div>
 
-## Prerequisites
+<div align="center">
+ <p> <strong>DESENVOLVIMENTO DE SISTEMAS ORIENTADO A DISPOSITIVOS MÓVEIS E BASEADOS NA WEB</strong></p>
+</div>
 
-- [node LTS](https://nodejs.org/en/download)
-- [dotnet 7](https://dotnet.microsoft.com/pt-br/download/dotnet/7.0)
-- [angular cli](https://angular.io/cli)
-- IDE: [VS Code](https://code.visualstudio.com/download) or [Rider](https://www.jetbrains.com/pt-br/rider/download/#section=windows) or [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
+<p> Projeto Integrador – apresentado ao Centro Universitário Senac, como exigência parcial para obtenção de aprovação na disciplina Projeto Integrador, do curso de Análise e Desenvolvimento de Sistemas. </br> Orientador: Prof. Gustavo Moreira Calixto </p>
 
-## Descomplica Gastos - Web
+<ul>
+  <li><strong> GRUPO 01 </strong>
+    <ul>
+      <li>Anderson Rafael Neves Maciel</li>
+      <li>Edson Jose Moreira Junior</li>
+      <li>Fernando Oliveira Carobino Junior</li>
+      <li>Igor Dos Santos Tessaro</li>
+      <li>Joao Ricardo Soares Da Silva</li>
+      <li>Joao Victor Santana Ribeiro</li>
+      <li>Lucas Gabriel Viotti</li>
+    </ul>
+  </li>
+</ul>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+<hr> 
 
-### Development server
+<div align="center">
+ <p> <strong>Proposta</strong></p>
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p>
+  Baseado no conceito inicial do projeto, o mesmo foi revisitado e adequado para uma versão web, onde a proposta continua sendo a de cadastramento e visualização dos gastos.  Sendo assim, fica definido como parte a ser desenvolvido, as telas de: </p>
+  <ul>
+    <li>Acesso;
+      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/ba495341-4f82-4181-bda3-57509021e075"/>
+    </li>
+    <li>Adição, Edição e Exclusão de Gastos;
+      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/3250a81c-df0d-4165-9b46-0a9717968598"/>
+    </li>
+  </ul>
+<p>
+  Possibilitando assim que o usuário possa adicionar e visualizar de maneira fácil seus gastos.
+</p>
 
-### Code scaffolding
+<p>Protótipo das telas apresentadas e adequadas para web, clique no link abaixo: </br>
+  <a href="https://www.figma.com/file/rMVee6XLTbZFhQJUxP8wVz/Descomplica-WEB?type=design&node-id=1%3A495&mode=design&t=2RwQtvuchIGD8gcm-1" target="_blank">
+    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+  </a>
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<hr> 
 
-### Build
+<div align="center">
+ <p> <strong>Preparação do Ambiente de Desenvolvimento</strong></p>
+</div>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<div align="left">
+  Tecnologia Frontend - Angular CLI version 16.2.9 </br>
+  <a href="https://angular.io/cli" target="_blank">
+    <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
+  </a>
+</div>
 
-### Running unit tests
+<div align="left">
+  Tecnologia Backend - Dotnet 7 | Node LTS </br>
+  <a href="https://dotnet.microsoft.com/pt-br/download/dotnet/7.0" target="_blank">
+    <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"/>
+  </a>
+  <a href="https://nodejs.org/en/download" target="_blank">
+    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+  </a>
+</div>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<div align="left">
+  Banco de Dados - MongoDB</br>
+  <a href="" target="_blank">
+    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+  </a>
+</div>
 
-### Running end-to-end tests
+<div align="left">
+  Tecnologia Auxiliar - Docker </br>
+  <a href="" target="_blank">
+    <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
+  </a>
+</div>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<hr>
 
-### Further help
+<div align="center">
+ <p> <strong>Vídeo</strong></p>
+</div>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<hr>
 
-## API
+<div align="center">
+ <p> <strong>Instruções de Execução do Teste</strong></p>
+</div>
 
-### How to run
-
-```shell
-dotnet run --project DescomplicaGastos.Api/DescomplicaGastos.Api.csproj
-```
-
-## Database
-
-## Docker
-
-```shell
-    docker compose -p "descomplica-gastos" up -d --build
-```
+<p>
+    <ol>
+        <li>Baixar o código, e abrir em sua IDE de preferência</li>
+        <li>Instalar o Docker</li>
+        <li>Com os códigos baixados na sua máquina, rodar o comando <strong>cd tools/docker</strong> no terminal da sua IDE de preferência</li>
+        <li>Uma vez que que o docker realizou todo o processo, rodar o comando <strong>docker compose -p "descomplica-gastos" up -d --build</strong> </li>
+        <li>Dentro do docker, abrir a porta <strong>5224:80</strong> e adicionar <strong>/swagger</strong> para acessar a API</li>
+        <li>Dentro da API na opção Login, clicando em <strong>Try it out</strong>, é possível que seja adicionado o nome de usuário e senha (recomendamos utilizar teste em ambos)</li>
+        <li>Novamente no docker, abrir a porta <strong>4200:80</strong>, inserir o usuário e senha para acesso</li>
+        <li>Na barra de navegação clicar em gastos e adicionar um gasto, editar e/ou excluir.</li>
+    </ol>
+    Rodando desta maneira não é necessário que sejam instaladas todas as tecnologias utilizadas, por isso optamos pelo docker como auxiliar.
+</p>

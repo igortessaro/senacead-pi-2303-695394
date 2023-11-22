@@ -42,13 +42,11 @@
   Possibilitando assim que o usuário possa adicionar e visualizar de maneira fácil seus gastos.
 </p>
 
-<div align="center">
 <p>Protótipo das telas apresentadas e adequadas para web, clique no link abaixo: </br>
   <a href="https://www.figma.com/file/rMVee6XLTbZFhQJUxP8wVz/Descomplica-WEB?type=design&node-id=1%3A495&mode=design&t=2RwQtvuchIGD8gcm-1" target="_blank">
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
   </a>
 </p>
-</div>
 
 <hr> 
 

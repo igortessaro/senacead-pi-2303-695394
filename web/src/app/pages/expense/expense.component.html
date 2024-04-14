@@ -35,8 +35,8 @@
     <tbody>
         <tr *ngFor="let expense of expenses">
             <th scope="row">{{ expense.id }}</th>
-            <td>{{ expense.category }}</td>
             <td>{{ expense.description }}</td>
+            <td>{{ expense.category }}</td>
             <td>{{ expense.value | currency }}</td>
             <td>{{ expense.createdAt | date : "dd/MM/yyyy HH:mm:ss" }}</td>
             <td>

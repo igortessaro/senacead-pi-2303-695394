@@ -1,8 +1,9 @@
 export class Expense {
-    constructor(description: string, value: number, userUuid: string) {
+    constructor(description: string, value: number, category: string, userUuid: string) {
         this.description = description;
         this.value = value;
         this.userUuid = userUuid;
+        this.category = category;
     }
 
     id: string = '';
@@ -10,4 +11,5 @@ export class Expense {
     description: string = '';
     value: number = 0;
     createdAt: Date = new Date();
+    category: string = '';
 }

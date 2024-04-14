@@ -14,6 +14,7 @@ export class ExpenseComponent implements OnInit {
     public formAddExpense!: FormGroup;
     public formEditExpense!: FormGroup;
     public expenses: Expense[] = [];
+    public expenseCategories: string[] = ['Food', 'Transport', 'Health', 'Education', 'Entertainment', 'Others'];
     private userUuid: string = '';
 
     constructor(
@@ -26,6 +27,7 @@ export class ExpenseComponent implements OnInit {
         this.formAddExpense = this.formBuilder.group({
             description: new FormControl('', [Validators.required]),
             value: new FormControl('', [Validators.required]),
+            category: new FormControl('', [Validators.required]),
         });
         this.formEditExpense = this.formBuilder.group({
             id: new FormControl('', [Validators.required]),
@@ -33,6 +35,7 @@ export class ExpenseComponent implements OnInit {
             description: new FormControl('', [Validators.required]),
             value: new FormControl('', [Validators.required]),
             userUuid: new FormControl('', [Validators.required]),
+            category: new FormControl('', [Validators.required]),
         });
         this.userUuid = this.localStorageService.get('user').uuid;
 
@@ -42,14 +45,16 @@ export class ExpenseComponent implements OnInit {
     }
 
     public onSubmit() {
-        this.expenseService.create(this.formAddExpense.value.description, this.formAddExpense.value.value, this.userUuid).subscribe((expense) => {
+        this.expenseService.create(this.formAddExpense.value.description, this.formAddExpense.value.value, this.formAddExpense.value.category, this.userUuid).subscribe((expense) => {
             this.formAddExpense.reset();
             this.expenses.push(expense);
         });
     }
 
     public deleteExpense(id: string) {
-        this.expenses = this.expenses.filter((expense) => expense.id !== id);
+        this.expenseService.delete(id).subscribe(() => {
+            this.expenses = this.expenses.filter((expense) => expense.id !== id);
+        });
     }
 
     public open(modal: any, expense: Expense): void {

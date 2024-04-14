@@ -7,6 +7,12 @@
             <input type="text" formControlName="value" class="form-control" placeholder="Valor" />
         </div>
         <div class="col">
+            <select class="form-select" aria-label="Default select example" formControlName="category">
+                <option value="">Selecione</option>
+                <option [ngValue]="category" *ngFor="let category of expenseCategories">{{category}}</option>
+              </select>
+        </div>
+        <div class="col">
             <button type="submit" class="btn btn-primary" [disabled]="formAddExpense.invalid">Adicionar</button>
         </div>
     </div>
@@ -27,10 +33,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let expense of expenses">
-            <th scope="row">{{expense.id}}</th>
-            <td>{{expense.description}}</td>
-            <td>{{expense.value | currency}}</td>
-            <td>{{expense.createdAt | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+            <th scope="row">{{ expense.id }}</th>
+            <td>{{ expense.description }}</td>
+            <td>{{ expense.value | currency }}</td>
+            <td>{{ expense.createdAt | date : "dd/MM/yyyy HH:mm:ss" }}</td>
             <td>
                 <a class="bi bi-pencil-square" (click)="open(editExpenseModal, expense)"></a>
                 <a class="bi bi-trash" (click)="deleteExpense(expense.id)"></a>
@@ -61,11 +67,11 @@
                 </div>
                 <div class="form-group">
                     <label for="value">Valor</label>
-                    <input type="text" formControlName="value" class="form-control"/>
+                    <input type="text" formControlName="value" class="form-control" />
                 </div>
                 <div class="form-group" *ngIf="false">
                     <label for="createdAt">Data de Criacao</label>
-                    <input type="text" formControlName="createdAt" class="form-control" [disabled]="true"/>
+                    <input type="text" formControlName="createdAt" class="form-control" [disabled]="true" />
                 </div>
                 <div class="col">
                     <button type="submit" class="btn btn-primary" [disabled]="formEditExpense.invalid">Salvar</button>
@@ -73,6 +79,5 @@
             </div>
         </form>
     </div>
-    <div class="modal-footer">
-    </div>
+    <div class="modal-footer"></div>
 </ng-template>

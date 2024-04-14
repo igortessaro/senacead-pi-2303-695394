@@ -24,7 +24,7 @@ public class ExpenseController : ControllerBase
     {
         _logger.LogInformation("{Method}: starting to create a new expense({@Expense})", nameof(CreateAsync), expense);
 
-        var entity = new Expense(expense.UserUuid, expense.Description, expense.Value);
+        var entity = new Expense(expense.UserUuid, expense.Description, expense.Value, expense.Category);
         await _expenseRepository.AddAsync(entity);
 
         _logger.LogInformation("{Method}: the expense({@Expense}) was successfully created", nameof(CreateAsync), entity);
@@ -47,6 +47,7 @@ public class ExpenseController : ControllerBase
 
         entity.Description = command.Description;
         entity.Value = command.Value;
+        entity.Category = command.Category;
 
         await _expenseRepository.UpdateAsync(entity);
 

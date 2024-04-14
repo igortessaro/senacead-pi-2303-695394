@@ -2,7 +2,6 @@ using DescomplicaGastos.Api.Commands;
 using DescomplicaGastos.Api.Repository;
 using DescomplicaGastos.Api.Repository.Entities;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
 
 namespace DescomplicaGastos.Api.Controllers;
 
@@ -64,5 +63,15 @@ public class ExpenseController : ControllerBase
         await _expenseRepository.DeleteAsync(x => x.Id == id);
 
         return Ok();
+    }
+
+    [HttpGet("categories")]
+    public Task<IActionResult> GetAllCategoriesAsync()
+    {
+        _logger.LogInformation("{Method}: starting to get all categories", nameof(GetAllCategoriesAsync));
+
+        var entities = new List<string> { "Food", "Transport", "Health", "Education", "Entertainment", "Others" };
+
+        return Task.FromResult<IActionResult>(Ok(entities));
     }
 }

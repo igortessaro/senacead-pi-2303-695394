@@ -14,7 +14,7 @@ export class ExpenseComponent implements OnInit {
     public formAddExpense!: FormGroup;
     public formEditExpense!: FormGroup;
     public expenses: Expense[] = [];
-    public expenseCategories: string[] = ['Food', 'Transport', 'Health', 'Education', 'Entertainment', 'Others'];
+    public expenseCategories: string[] = [];
     private userUuid: string = '';
 
     constructor(
@@ -39,6 +39,9 @@ export class ExpenseComponent implements OnInit {
         });
         this.userUuid = this.localStorageService.get('user').uuid;
 
+        this.expenseService.getAllCategories().subscribe((categories) => {
+            this.expenseCategories = categories;
+        });
         this.expenseService.getAllByUser(this.userUuid).subscribe((expenses) => {
             this.expenses = expenses;
         });

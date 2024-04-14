@@ -26,4 +26,8 @@ export class ExpenseService {
     public delete(id: string): Observable<Object> {
         return this.http.delete(`${environment.expenseApi}/api/expense/${id}`);
     }
+
+    public getAllCategories(): Observable<string[]> {
+        return this.http.get<string[]>(`${environment.expenseApi}/api/expense/categories`);
+    }
 }

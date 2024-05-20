@@ -3,19 +3,17 @@
 </div>
 
 <div align="center">
- <p> <strong>DESENVOLVIMENTO DE SISTEMAS ORIENTADO A DISPOSITIVOS MÓVEIS E BASEADOS NA WEB</strong></p>
+ <p> <strong>PROJETO INTEGRADOR: ANÁLISE DE SOLUÇÕES INTEGRADAS PARA ORGANIZAÇÕES</strong></p>
 </div>
 
-<p> Projeto Integrador – apresentado ao Centro Universitário Senac, como exigência parcial para obtenção de aprovação na disciplina Projeto Integrador, do curso de Análise e Desenvolvimento de Sistemas. </br> Orientador: Prof. Gustavo Moreira Calixto </p>
+<p> Apresentado ao Centro Universitário Senac, como exigência parcial para obtenção de aprovação na disciplina Projeto Integrador, do curso de Análise e Desenvolvimento de Sistemas. </br> Prof. Evandro Carlos Teruel </p>
 
 <ul>
-  <li><strong> GRUPO 01 </strong>
+  <li><strong> GRUPO 42 </strong>
     <ul>
-      <li>Anderson Rafael Neves Maciel</li>
       <li>Edson Jose Moreira Junior</li>
       <li>Fernando Oliveira Carobino Junior</li>
       <li>Igor Dos Santos Tessaro</li>
-      <li>Joao Ricardo Soares Da Silva</li>
       <li>Joao Victor Santana Ribeiro</li>
       <li>Lucas Gabriel Viotti</li>
     </ul>
@@ -29,13 +27,16 @@
 </div>
 
 <p>
-  Baseado no conceito inicial do projeto, o mesmo foi revisitado e adequado para uma versão web, onde a proposta continua sendo a de cadastramento e visualização dos gastos.  Sendo assim, fica definido como parte a ser desenvolvido, as telas de: </p>
+  Proposta de aplicação para cadastramento e visualização de gastos pessoais.  Sendo assim, fica definido como parte a ser desenvolvido, as telas de: </p>
   <ul>
     <li>Acesso;
-      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/ba495341-4f82-4181-bda3-57509021e075"/>
+      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/fad6bc90-2f16-43db-b82e-73daed29b9ad"/>
+    </li>
+    <li>Home - Gráfico;
+      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/a68ec1e1-8115-4716-80fa-1eb30b1f884a"/>
     </li>
     <li>Adição, Edição e Exclusão de Gastos;
-      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/3250a81c-df0d-4165-9b46-0a9717968598"/>
+      <img src="https://github.com/lucasgviotti/Teste/assets/98164934/759d31bd-5cfb-4ab9-aee7-21ed5f61b9b7"/>
     </li>
   </ul>
 <p>
@@ -54,14 +55,14 @@
  <p> <strong>Preparação do Ambiente de Desenvolvimento</strong></p>
 </div>
 
-<div align="center">
+<div align="left">
   Tecnologia Frontend - Angular CLI version 16.2.9 </br>
   <a href="https://angular.io/cli" target="_blank">
     <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
   </a>
 </div>
 
-<div align="center">
+<div align="left">
   Tecnologia Backend - Dotnet 7 | Node LTS </br>
   <a href="https://dotnet.microsoft.com/pt-br/download/dotnet/7.0" target="_blank">
     <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white"/>
@@ -71,14 +72,14 @@
   </a>
 </div>
 
-<div align="center">
+<div align="left">
   Banco de Dados - MongoDB</br>
   <a href="" target="_blank">
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
   </a>
 </div>
 
-<div align="center">
+<div align="left">
   Tecnologia Auxiliar - Docker </br>
   <a href="" target="_blank">
     <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
